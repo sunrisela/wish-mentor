@@ -1,0 +1,114 @@
+html {
+	background: url('../img/bg-noise.jpg') #f5f5f5;
+}
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.4em;
+	color: #333333;
+	background: url('../img/bg-noise.jpg') #f5f5f5;
+}
+
+/* Jumbotrons */
+.jumbotron {
+  position: relative;
+}
+.jumbotron h1 {
+  margin-bottom: 9px;
+  font-size: 81px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  color: #DD390D;
+}
+.jumbotron p {
+  margin-bottom: 18px;
+  font-weight: 300;
+}
+.jumbotron .btn-large {
+  font-size: 20px;
+  font-weight: normal;
+  padding: 14px 24px;
+  margin-right: 10px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+.jumbotron .btn-large small {
+  font-size: 14px;
+}
+
+/* Masthead */
+.masthead {
+  padding-top: 36px;
+}
+.masthead h1,
+.masthead p {
+  text-align: center;
+}
+.masthead h1 {
+  margin-bottom: 18px;
+}
+.masthead p {
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+#register, #login {
+	padding: 25px 30px 25px 30px;
+	background: rgba(166, 156, 141, 0.12);
+	margin: 30px 0;
+	border-bottom: 1px solid #fff;
+	-webkit-box-shadow: 0 1px 1px rgba(166, 156, 141, 0.3) inset;
+	-moz-box-shadow: 0 1px 1px rgba(166, 156, 141, 0.3) inset;
+	-o-box-shadow: 0 1px 1px rgba(166, 156, 141, 0.3) inset;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+}
+#register label, #login label {
+	display: block;
+	float: none;
+	text-align: left;
+	color: rgba(0, 0, 0, 0.6);
+	text-shadow: 0 1px 0 #fff;
+}
+#signup .input, #login .input {
+	margin: 0;
+}
+#signup .input input, #login .input input, .sunken .input input {
+	border-radius: 2px;
+	margin: 0;
+	padding: 9px 12px;
+	font-size: 15px;
+	color: #444;
+	width: 284px;
+	-webkit-box-shadow: 0 1px 0px #fff;
+	-moz-box-shadow: 0 1px 0px #fff;
+}
+#signup .input input:focus, #login .input input:focus {
+	border-color: #999;
+}
+#signup .actions .btn, #login .actions .btn {
+	margin: 0;
+	float: right;
+	padding: 8px 20px;
+	font-weight: bold;
+}
+#signup .forgot-password, #login .forgot-password {
+	font-weight: 200;
+	color: #999;
+	font-size: 13px;
+	margin-top: 1em;
+}
+#signup .forgot-password:hover, #login .forgot-password:hover {
+	color: #333;
+}
+#signup h2, #login h2 {
+	text-align: center;
+	color: rgba(0, 0, 0, 0.5);
+	text-shadow: 0 1px 0 #fff;
+	font-weight: 200;
+}

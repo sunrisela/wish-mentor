@@ -1,0 +1,44 @@
+.btn {
+    background: #F6F6F6;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    overflow: visible;
+    color: #555;
+    font-weight: bold;
+    font-size: 13px;
+    text-shadow: 0 1px 0 white;
+    padding: 0.6em 1.5em;
+    border: 1px solid #CCC;
+    border-bottom-color: #AAA;
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#ffffff,EndColorStr=#e0e0e0);
+    background-image: -moz-linear-gradient(top,#fff 0,#e0e0e0 100%);
+    background-image: -ms-linear-gradient(top,#fff 0,#e0e0e0 100%);
+    background-image: -o-linear-gradient(top,#fff 0,#e0e0e0 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#fff),color-stop(100%,#e0e0e0));
+    background-image: -webkit-linear-gradient(top,#fff 0,#e0e0e0 100%);
+    background-image: linear-gradient(top,#fff 0,#e0e0e0 100%);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: inset 0 0 1px #fff;
+    -ms-box-shadow: inset 0 0 1px #fff;
+    -o-box-shadow: inset 0 0 1px #fff;
+    -webkit-box-shadow: inset 0 0 1px #fff;
+    box-shadow: inset 0 0 1px #fff;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transtion: all 0.25s;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+}
+
+.btn:hover {
+    background-position: 0 0px;
+    border:1px solid #999;
+    -moz-box-shadow: 0 0 3px #ccc;
+    -ms-box-shadow: 0 0 3px #ccc;
+    -o-box-shadow: 0 0 3px #ccc;
+    -webkit-box-shadow: 0 0 3px #ccc;
+    box-shadow: 0 0 3px #ccc;
+}
