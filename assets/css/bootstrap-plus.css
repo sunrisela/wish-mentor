@@ -1,4 +1,4 @@
-.btn {
+.silver-btn {
     background: #F6F6F6;
     white-space: nowrap;
     vertical-align: middle;
@@ -33,7 +33,7 @@
     transition: all 0.25s;
 }
 
-.btn:hover {
+.silver-btn:hover {
     background-position: 0 0px;
     border:1px solid #999;
     -moz-box-shadow: 0 0 3px #ccc;
