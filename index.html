@@ -10,10 +10,22 @@
 		<link href="assets/css/bootstrap.css" rel="stylesheet">
 		<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 		<link href="assets/css/bootstrap-plus.css" rel="stylesheet">
-		<link href="assets/css/index.css" rel="stylesheet">
+		<link href="assets/css/login.css" rel="stylesheet">
+		
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
 		<!-- Le javascript -->
 		<script src="assets/js/jquery.js"></script>
+		<script src="assets/js/jquery.patch.js"></script>
+		<script src="assets/js/jquery.form.js"></script>
+		<script src="assets/js/jquery.metadata.js"></script>
+		<script src="assets/js/jquery.validate.js"></script>
+		<script src="assets/js/jquery.validate.messages_cn.js"></script>
 		<script src="assets/js/bootstrap.js"></script>
+		<script src="assets/js/login.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -28,7 +40,7 @@
 							<div class="control-group">
 								<label>帐号</label>
 								<div class="input">
-									<input type="text" name="id" id="id" class="span3" placeholder="Enter your username…">
+									<input type="text" name="login_id" id="login_id" class="span3" placeholder="Enter your username…">
 								</div>
 							</div>
 							<div class="control-group">
@@ -37,23 +49,20 @@
 									<input type="password" name="password" id="password" class="span3" placeholder="Enter your password…">
 								</div>
 							</div>
-							<div class="control-group">
-								<div class="btn-group">
-				          <button class="btn btn-success">Success</button>
-				          <button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-				          <ul class="dropdown-menu">
-				            <li><a href="#">学生</a></li>
-				            <li><a href="#">教师</a></li>
-				            <li class="divider"></li>
-				            <li><a href="#">管理员</a></li>
-				          </ul>
-				        </div>
-							</div>
-							<div class="actions clearfix">
-								<a href="#" class="forgot-password pull-left">忘记密码?</a>
-								<button type="submit" class="btn silver-btn">
+							<div class="control-group actions clearfix">
+								<div class="select pull-left">
+									<select id="role" name="role" class="btn span2">
+		                <option value="1">学生</option>
+		                <option value="2">导师</option>
+		                <option value="0">管理员</option>
+		              </select>
+								</div>
+								<button type="submit" class="btn silver-btn pull-right">
 									登录
 								</button>
+							</div>
+							<div class="clearfix">
+								<a href="#" class="forgot-password pull-left">忘记密码?</a>
 							</div>
 						</form>
 					</div>

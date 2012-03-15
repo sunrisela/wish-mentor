@@ -78,7 +78,7 @@ body {
 #signup .input, #login .input {
 	margin: 0;
 }
-#signup .input input, #login .input input, .sunken .input input {
+#signup .input input, #login .input input {
 	border-radius: 2px;
 	margin: 0;
 	padding: 9px 12px;
@@ -91,11 +91,22 @@ body {
 #signup .input input:focus, #login .input input:focus {
 	border-color: #999;
 }
+#signup .select select, #login .select select {
+	border-radius: 2px;
+	margin: 0;
+	padding: 9px 12px;
+	font-size: 15px;
+	color: #444;
+	height: 36px;
+	-webkit-box-shadow: 0 1px 0px #fff;
+	-moz-box-shadow: 0 1px 0px #fff;
+}
 #signup .actions .btn, #login .actions .btn {
 	margin: 0;
-	float: right;
-	padding: 8px 20px;
 	font-weight: bold;
+}
+#signup .actions .silver-btn, #login .actions .silver-btn {
+	padding: 8px 40px;
 }
 #signup .forgot-password, #login .forgot-password {
 	font-weight: 200;
