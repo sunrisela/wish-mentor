@@ -417,7 +417,7 @@ ol ul {
   margin-bottom: 0;
 }
 ul {
-  list-style: disc;
+  list-style: none;
 }
 ol {
   list-style: decimal;
@@ -3174,6 +3174,7 @@ input[type="submit"].btn.btn-mini {
 .pagination .active a {
   color: #999999;
   cursor: default;
+  pointer-events: none;
 }
 .pagination .disabled span,
 .pagination .disabled a,
@@ -3181,6 +3182,7 @@ input[type="submit"].btn.btn-mini {
   color: #999999;
   background-color: transparent;
   cursor: default;
+  pointer-events: none;
 }
 .pagination li:first-child a {
   border-left-width: 1px;

@@ -1,7 +1,7 @@
 
 $(function(){
 	$('button:submit').click(function(){
-		window.location.href = "application.html";
+		window.location.href = "student_index.html";
 		return false;
 	});
 })
