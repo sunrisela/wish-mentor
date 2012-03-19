@@ -1,3 +1,6 @@
+
+$.metadata.setType("attr", "validation");
+
 $(function(){
 	$.post('menu_0.html',function(data){
 		$('#sidebar').append(data);
