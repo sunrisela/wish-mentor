@@ -9,12 +9,14 @@
 		<!-- Le styles -->
 		<link href="assets/css/bootstrap.css" rel="stylesheet">
 		<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="assets/css/bootstrap-patch.css" rel="stylesheet">
 		<link href="assets/css/bootstrap-plus.css" rel="stylesheet">
 		<link href="assets/css/main.css" rel="stylesheet">
 		<style type="text/css">
       body {
         padding-top: 60px;
         padding-bottom: 40px;
+        overflow-y: scroll;
       }
       .sidebar-nav {
         padding: 9px 0;
@@ -33,41 +35,93 @@
 		<script src="assets/js/jquery.metadata.js"></script>
 		<script src="assets/js/jquery.validate.js"></script>
 		<script src="assets/js/jquery.validate.messages_cn.js"></script>
+		<script src="assets/js/jquery.tablesorter.js"></script>
 		<script src="assets/js/bootstrap.js"></script>
+		<script src="assets/js/utils.js"></script>
 		<script src="assets/js/main.js"></script>
   </head>
 
   <body>
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#" style="color: #DD390D;">Wish Mentor</a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">主页</a></li>
-              <li><a href="#about">关于作品</a></li>
-              <li><a href="#contact">作者</a></li>
-            </ul>
-            <p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-
+    <div class="navbar navbar-fixed-top"></div>
+		
     <div class="container-fluid">
       <div class="row-fluid">
         <div id="sidebar" class="span2">
         </div><!--/span-->
-        <div class="span10">
-          <div class="row-fluid">
+        <div id="content" class="span10">
+        	<ul class="breadcrumb">
+					  <li>
+					    <a href="#">Home</a> <span class="divider">/</span>
+					  </li>
+					  <li>
+					    <a href="student_index.html">学生信息</a> <span class="divider">/</span>
+					  </li>
+					  <li>
+					    <a href="student_index.html">Mark</a> <span class="divider">/</span>
+					  </li>
+					  <li class="active">编辑</li>
+					</ul>
+          <ul class="nav nav-tabs">
+					  <li><a href="#show" data-toggle="tab">查看</a></li>
+					  <li class="active"><a href="#edit" data-toggle="tab">编辑</a></li>
+					  <li><a href="#del" data-toggle="tab">删除</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane fade" id="show">
+							<div class="span10">
+							<table class="table table-bordered table-striped">
+								<tbody>
+				          <tr>
+				          	<td class="span3">学号</td>
+				          	<td>30501229</td>
+				          </tr>
+				          <tr>
+				          	<td>姓名</td>
+				          	<td>Mark</td>
+				          </tr>
+				          <tr>
+				          	<td>性别</td>
+				          	<td>男</td>
+				          </tr>
+				          <tr>
+				          	<td>专业班级</td>
+				          	<td>计算机0505</td>
+				          </tr>
+				          <tr>
+				          	<td>联系电话</td>
+				          	<td>13616551237</td>
+				          </tr>
+				          <tr>
+				          	<td>Email</td>
+				          	<td><a href="#">sunrisela@gmail.com</a></td>
+				          </tr>
+				          <tr>
+				          	<td>个人主页</td>
+				          	<td>yiqikan.tv</td>
+				          </tr>
+				          <tr>
+				          	<td>自我介绍</td>
+				          	<td></td>
+				          </tr>
+				          <tr>
+				          	<td>获得荣誉</td>
+				          	<td></td>
+				          </tr>
+				          <tr>
+				          	<td>个人评价</td>
+				          	<td></td>
+				          </tr>
+				          <tr>
+				          	<td>其他说明</td>
+				          	<td></td>
+				          </tr>
+				        </tbody>
+							</table>
+							</div>
+						</div>
+						<div class="tab-pane fade active in" id="edit">
           	<form class="form-horizontal">
           		<fieldset>
-          			<legend>基本资料</legend>
           			<div class="control-group">
           				<label class="control-label" for="username">学号:</label>
           				<div class="controls">
@@ -148,6 +202,17 @@
 			          </div>
           		</fieldset>
           	</form>
+          	</div>
+          	<div class="tab-pane fade" id="del">
+          		<div class="alert alert-block alert-error fade in span10">
+		            <h4 class="alert-heading">Oh snap! You got an error!</h4>
+		            <p>Are you sure you want to delete this feed “Feed #6477”? The following related items may be deleted or orphaned:</p>
+		            <p>
+		            	<a class="btn btn-danger" href="#">Take this action</a>
+		            	<a class="btn" href="#">Or do this</a>
+		            </p>
+		          </div>
+          	</div>
           </div>
         </div><!--/span-->
       </div><!--/row-->
