@@ -1,7 +1,8 @@
 @charset "UTF-8";
 /* 选择导师 */
 .thumbnail > img {
-  cursor: pointer; }
+  cursor: pointer;
+  max-width: 225px; }
 .thumbnail .favorite {
   padding: 9px;
   border-bottom: 1px solid #EEE; }
