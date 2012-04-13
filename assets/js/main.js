@@ -12,4 +12,15 @@ $(function(){
 		}
 	});
 	showMsg("测试show message");
+	
+	var $container = $('#teacher_list');
+	$container.imagesLoaded(function(){
+	  $container.masonry({
+	    itemSelector : 'li.span3'
+	  });
+	});
+	
+	/*$('#teacher_list').masonry({
+	  itemSelector: '>li'
+	});*/
 })
