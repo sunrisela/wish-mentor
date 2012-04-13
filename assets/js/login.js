@@ -9,8 +9,8 @@ $(function(){
 		success: function(response, status, xhr, $form) {	// callback
 			// 判断登录是否成功
 			// TODO
-			alert("params: "+$form.serialize());
-			window.location.href = "student_index.html";
+			//alert("params: "+$form.serialize());
+			window.location.href = "volunteer_edit.html";
 		},
 		error: function(response) {	// callback  error: 404,500..
 			alert('login error.');
