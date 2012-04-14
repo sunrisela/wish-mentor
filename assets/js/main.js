@@ -2,7 +2,7 @@
 $.metadata.setType("attr", "validation");
 
 $(function(){
-	$('#sidebar').load('menu_0.html');
+	$('#sidebar').load('menu_1.html');
 	$('.navbar.navbar-fixed-top').load('header.html');
 	
 	$("#list table").tablesorter({ 
