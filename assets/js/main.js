@@ -29,4 +29,34 @@ $(function(){
 	
 	// 初始化：详细资料 浮出框
 	$('a[rel="popover"]').popover();
+	
+	// 事件绑定：选择第几志愿
+	$('.thumbnail .confirm .btn-group .dropdown-menu a').live('click', function(){
+		var self = $(this);
+		if(self.attr('selected') === undefined){
+			var $pre = self.closest('.dropdown-menu').find('a[selected]');
+			$pre.removeAttr('selected');
+			$pre.find('.icon-ok').remove();
+			self.attr('selected', true);
+			self.prepend('<i class="icon-ok"></i>');
+		}
+		return false;
+	});
+	
+	// 事件绑定：选定按钮
+	$('.thumbnail .confirm .btn-group .btn:first').live('click', function(){
+		var self = $(this);
+		var val  = self.siblings('.dropdown-menu').find('a[selected]').data('choice');
+		
+		/* 这里先要判断是否会覆盖已选的志愿,若会，则给予提示 */
+		// TODO
+		if(true){
+			var rs = confirm('将覆盖第 '+val+ ' 志愿，确定吗？');
+			// 取消按钮，中断该操作
+			if(!rs) return false;
+		}
+		
+		// TODO 发送请求
+		//$.post(url, params, function(){});
+	});
 })
