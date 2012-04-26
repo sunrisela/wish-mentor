@@ -70,4 +70,63 @@ $(function(){
 		prevText: "上一月"
 	});
 	$('#edit form #birth').datepicker();
+	
+	/*  照片裁剪 */
+	// Create variables (in this scope) to hold the API and image size
+	var jcrop_api, boundx, boundy;
+	// 裁剪后的效果图预览
+	var updatePreview = function(c) {
+		if (parseInt(c.w) > 0) {
+			var rx = 100 / c.w;
+			var ry = 100 / c.h;
+			
+			$('#avatar_preview img').css({
+				width: Math.round(rx * boundx) + 'px',
+				height: Math.round(ry * boundy) + 'px',
+				marginLeft: '-' + Math.round(rx * c.x) + 'px',
+				marginTop: '-' + Math.round(ry * c.y) + 'px'
+			});
+		}
+	};
+	
+	// 渲染被裁剪的(上传)图片
+	var regCropAvatar = function(){
+		$('#my_avatar img').Jcrop({
+			minSize: [10,10],		// 裁剪的最小宽度、高度
+			maxSize: [225,300],	// 裁剪的最大宽度、高度
+			setSelect : [40,40,180,180],	// 设置 默认选中区域的左上角、右下角坐标
+			onSelect: updatePreview,
+			onChange: updatePreview,
+			onRelease: function(){},
+			aspectRatio: 1	// 等比缩放
+		}, function(){
+			// Use the API to get the real image size
+			var bounds = this.getBounds();
+			boundx = bounds[0];
+			boundy = bounds[1];
+			// Store the API in the jcrop_api variable
+			jcrop_api = this;
+	  });
+	};
+	
+	/* 照片上传前预览 */
+	var $crop_container = $('#my_avatar');
+	var $input_file = $('form#upload_avatar input:file');
+	$input_file.bind('change', function(e){
+		e = e.originalEvent;
+		e.preventDefault();
+		window.loadImage(
+			(e.dataTransfer || e.target).files[0],
+			function (img) {
+				$crop_container.children().replaceWith(img);
+				$('#avatar_preview').children().replaceWith($.clone(img));
+				regCropAvatar();
+			},
+			{
+				maxWidth: $crop_container.width(),
+				maxHeight: $crop_container.height()
+			}
+		);
+	});
+  
 })
