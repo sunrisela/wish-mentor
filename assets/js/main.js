@@ -128,5 +128,7 @@ $(function(){
 			}
 		);
 	});
+	
+	regCropAvatar();
   
 })
